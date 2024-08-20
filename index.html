@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="./styles.css"></styles>
 </head>
 <body>
+    <div id="images">
+        <img style="width: 100%; height: 100%; object-fit: none; object-position: 45%;" src="./snowy_dog.jpeg">
+        <div id="logo-container">
+            <img style="width: auto; height: 100%; margin: 0; padding: 10px 0; object-fit: cover;"src="./odin-lined.png">
+            <h1 id="logo-text">ODIN</h1>
+        </div>
+    </div>
+    <form>
+        <fieldset>
+          <legend>Feedback form</legend>
+  
+          <p>Required fields are labelled with "required".</p>
+          <div>
+            <label for="name">Name: </label>
+            <input id="name" name="name" type="text" required>
+            <span></span>
+          </div>
+          <div>
+            <label for="age">Age (must be 12+): </label>
+            <input id="age" name="age" type="number" min="12" max="120" required>
+            <span></span>
+          </div>
+          <div>
+            <label for="email">Email address (include if you want a response): </label>
+            <input id="email" name="email" type="email">
+            <span></span>
+          </div>
+          <div><button>Submit</button></div>
+        </fieldset>
+      </form>
+    
     
 </body>
 </html>

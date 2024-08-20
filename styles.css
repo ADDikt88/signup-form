@@ -1,7 +1,13 @@
-body {
+  body {
     font-family: 'Josefin Sans', sans-serif;
-    margin: 20px auto;
-    max-width: 460px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  form{
+    color: black;
   }
 
   fieldset {
@@ -32,3 +38,31 @@ body {
     padding: 5px;
     height: 30px;
   }
+
+  #images {
+    position: relative;
+    width: 40%;
+    height: 100vh;
+
+  }
+
+  #logo-container {
+    position: absolute;
+    background-color: black;
+    opacity: 50%;
+    color: white;
+    top: 20%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    
+  }
+
+  #logo-text {
+    
+  }
+
+  
