@@ -24,7 +24,6 @@
   }
 
   fieldset {
-    margin-top: 20px;
     border: none;
   }
 
@@ -41,22 +40,33 @@
 
   fieldset > div {
     margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
     margin: 1rem;  
     
   }
 
-  label, input {
+  label {
+    display: block;
+    font-family: inherit;
+    font-size: 80%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+
+  input {
     display: block;
     font-family: inherit;
     font-size: 100%;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 200px;
+    width: 250px;
     padding: 5px;
     height: 30px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    
   }
 
   #images {
@@ -108,10 +118,12 @@
     align-items: space-evenly;
     justify-content:center;
     background-color: #f0f0f0;
+    padding-bottom: 20px;
   }
 
   h1 {
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-right: 50px;
     font-size: 2rem;
   }
 
@@ -123,6 +135,7 @@
   .middle-border {
     border-bottom: 10px solid lightgray;
     min-width: 100%;
+    padding-top: 1rem;
   }
   
   #top-container {
@@ -157,9 +170,39 @@
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 12px;
+    box-shadow: 3px 6px 8px #999;
+    transition: trasform 0.1s ease, box-shadow 0.1s ease;
+    cursor: pointer;
   }
 
   #account{
     margin-top: 2rem;
     font-size: 1.5rem;
+  }
+
+  
+  input:invalid:focus,
+  input:invalid:not(:placeholder-shown)
+  {
+    border-color: red;
+  }
+
+
+  input:valid {
+    border-color: blue;
+  }
+
+  input:indeterminate{
+    border: none;
+  }
+
+  input:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    color: red;
+    content: "Please enter a valid e-mail";
+    position: absolute;
+  }
+
+  button:active {
+    transform: translateY(3px, 6px);
+    box-shadow: 1px 2px 4px #666;
   }

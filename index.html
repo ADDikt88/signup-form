@@ -22,37 +22,51 @@
             <h1>
               This is Snowy's fake online service! You can sign up to learn
               all about Snowy's latest adventures and treasures she finds!
-              <p></p><br/>
+            <br/>
               Sign up <em>now</em> to get started.
             </h1>
+            <p></p>
             <h1>You <em>know</em> you want to.</h1>
           </div>
         </div>
-        <div class="middle-border"></div>
+
         <div id="middle">
+          <h1>Let's do this!</h1>
           <form id="sign-up">
-            <h1>Let's do this!</h1>
+
             <fieldset>
               <div>
-                <label for="fname">First Name: </label>
-                <input id="fname" name="fname" type="text" required>
+                <label for="fname">FIRST NAME</label>
+                <input id="fname" name="fname" type="text" placeholder="" required>
                 <span></span>
               </div>
               <div>
-                <label for="lname">Last Name: </label>
-                <input id="lname" name="lname" type="text" required>
+                <label for="lname">LAST NAME</label>
+                <input id="lname" name="lname" type="text" placeholder=""required>
                 <span></span>
               </div>
               <div>
-                <label for="age">Age (must be 12+): </label>
-                <input id="age" name="age" type="number" min="12" max="120" required>
+                <label for="email">EMAIL</label>
+                <input id="email" name="email" type="email" title="Please enter a valid email" placeholder="" required>
                 <span></span>
               </div>
               <div>
-                <label for="email">Email address (include if you want a response): </label>
-                <input id="email" name="email" type="email">
+                <label for="phone">PHONE NUMBER</label>
+                <input id="phone" name="phone" type="tel" title="Please enter a valid phone number" placeholder="" required>
                 <span></span>
               </div>
+              <div>
+                <label for="pwd">PASSWORD</label>
+                <input id="pwd" name="pwd" type="password" placeholder="" required>
+                <span></span>
+              </div>
+              <div>
+                <label for="pwdConfirm">CONFIRM PASSWORD</label>
+                <input id="pwdConfirm" name="pwdConfirm" type="password" placeholder="" required>
+                <span></span>
+              </div>
+
+
             </fieldset>
           </form>
          
@@ -60,7 +74,7 @@
         <div class="middle-border"></div>
         <div id="bottom-container">
           <div id="bottom">
-            <button type="submit" for="sign-up">Create Account</button>
+            <button id="submit-button">Create Account</button>
             <p id="account">Already have an account? <a href="#">Log in</a></p>
           </div>
         </div>
@@ -68,4 +82,5 @@
     
     
 </body>
+<script src="./signup.js"></script>
 </html>
