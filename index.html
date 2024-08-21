@@ -37,32 +37,33 @@
             <fieldset>
               <div>
                 <label for="fname">FIRST NAME</label>
-                <input id="fname" name="fname" type="text" placeholder="" required>
+                <input id="fname" name="fname" type="text" title="Please enter your first name." placeholder="" minlength="1" required>
                 <span></span>
               </div>
               <div>
                 <label for="lname">LAST NAME</label>
-                <input id="lname" name="lname" type="text" placeholder=""required>
+                <input id="lname" name="lname" type="text" title="Please enter your last name" placeholder="" minlength="1" required>
                 <span></span>
               </div>
               <div>
                 <label for="email">EMAIL</label>
-                <input id="email" name="email" type="email" title="Please enter a valid email" placeholder="" required>
+                <input id="email" name="email" type="email" title="Please enter a valid email." placeholder="" minlength="1" required>
                 <span></span>
               </div>
               <div>
                 <label for="phone">PHONE NUMBER</label>
-                <input id="phone" name="phone" type="tel" title="Please enter a valid phone number" placeholder="" required>
+                <input id="phone" name="phone" type="tel" title="Please enter a valid phone number." placeholder="" minlength="1" required>
                 <span></span>
               </div>
               <div>
                 <label for="pwd">PASSWORD</label>
-                <input id="pwd" name="pwd" type="password" placeholder="" required>
+                <input id="pwd" name="pwd" type="password" title="Please enter a valid password (min 8 char)." placeholder="" minlength="8" required>
                 <span></span>
+                <span id="mismatch-pwd"></span>
               </div>
               <div>
                 <label for="pwdConfirm">CONFIRM PASSWORD</label>
-                <input id="pwdConfirm" name="pwdConfirm" type="password" placeholder="" required>
+                <input id="pwdConfirm" name="pwdConfirm" type="password" title="Please confirm your password." minlength="8" placeholder="" required>
                 <span></span>
               </div>
 
@@ -75,6 +76,7 @@
         <div id="bottom-container">
           <div id="bottom">
             <button id="submit-button">Create Account</button>
+            <span id="missing"></span>
             <p id="account">Already have an account? <a href="#">Log in</a></p>
           </div>
         </div>

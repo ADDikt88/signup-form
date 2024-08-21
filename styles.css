@@ -180,13 +180,29 @@
     font-size: 1.5rem;
   }
 
+  #mismatch-pwd{
+    color: red;
+    font-size: 0.8rem;
+    position: absolute;
+  }
+
+  #missing{
+    color: red;
+    font-size: 0.8rem;
+  }
+
   
   input:invalid:focus,
-  input:invalid:not(:placeholder-shown)
+  input:invalid:not(:placeholder-shown),
+  input.error
   {
     border-color: red;
   }
 
+  #pwd.error, #pwdConfirm.error {
+    border-color: red;
+
+  }
 
   input:valid {
     border-color: blue;
@@ -196,11 +212,21 @@
     border: none;
   }
 
-  input:invalid:not(:placeholder-shown):not(:focus) + span::after {
+  input#email:invalid:not(:placeholder-shown):not(:focus) + span::after {
     color: red;
-    content: "Please enter a valid e-mail";
+    font-size: 0.8rem;
+    content: "Please enter a valid e-mail (must include @)";
     position: absolute;
   }
+
+  input#pwd:invalid:not(:placeholder-shown):not(:focus) + span::after, input#pwdConfirm:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    color: red;
+    font-size: 0.8rem;
+    content: "Please enter a valid password (min 8 chars)";
+    position: absolute;
+  }
+
+  
 
   button:active {
     transform: translateY(3px, 6px);
